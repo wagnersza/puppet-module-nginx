@@ -1,0 +1,19 @@
+h1. Install Nginx
+
+h3. Simple standalone instance:
+
+Create a standalone tomcat instance whose HTTP server listen on port 8080:
+
+<pre>
+  include nginx
+
+  nginx::instance {"myapp":
+    ensure    => present,
+    http_port => "8080",
+  }
+</pre>
+
+h2. Author
+
+Wagner Souza <wagnersza@gmail.com>
+https://github.com/wagnersza
