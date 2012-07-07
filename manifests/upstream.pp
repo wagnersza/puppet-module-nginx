@@ -33,15 +33,12 @@
 #
 # Copyright 2012 Wagner Souza.
 #
-class nginx::packages {
-
-  $nginx_package_name               =  
-  $nginx_package_version            =
-  $nginx_passenger_package_name     =
-  $nginx_passenger_package_version  =
-  $gunicorn_package_name            =
-  $gunicorn_package_version         =
+class nginx::upstream inherits nginx {
   
-  #instala aqui os pacotes
-
+  # Esse cara vai ter que ser um define
+  # criar conf do upstream
+  # configurar proxy
+  # configurar logrotate
+  # criar diretório de log
+  
 }

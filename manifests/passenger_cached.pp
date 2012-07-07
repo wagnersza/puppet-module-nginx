@@ -33,15 +33,10 @@
 #
 # Copyright 2012 Wagner Souza.
 #
-class nginx::packages {
+class nginx::passenger::cached inherits nginx::passenger {
 
-  $nginx_package_name               =  
-  $nginx_package_version            =
-  $nginx_passenger_package_name     =
-  $nginx_passenger_package_version  =
-  $gunicorn_package_name            =
-  $gunicorn_package_version         =
+  ## Esse vai ser o passenger cached
+  # cria o vhost separado para cachear no nginx
+  # cria o proxy no nginx
   
-  #instala aqui os pacotes
-
 }

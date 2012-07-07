@@ -34,6 +34,22 @@
 # Copyright 2012 Wagner Souza.
 #
 class nginx {
+  # instala o pacote do nginx
   include nginx::packages
+  include nginx::params
+  
+  # coloca a conf padrão
+  file { "conf_nginx_default":
+    path    => $::nginx::params::nginx_conf_file,
+    content => template($::nginx::params::nginx_conf_file_template),
+    mode    => "0644",
+    require => Class[Nginx::Packages]
+  }
+  
+
+  # configura logrotate
+  # coloca no sysctl
+  # starta/restarta nginx
+  # tentar - colocar option para upstream
   
 }

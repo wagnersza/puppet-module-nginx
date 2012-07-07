@@ -33,15 +33,12 @@
 #
 # Copyright 2012 Wagner Souza.
 #
-class nginx::packages {
+class nginx::passenger inherits nginx {
 
-  $nginx_package_name               =  
-  $nginx_package_version            =
-  $nginx_passenger_package_name     =
-  $nginx_passenger_package_version  =
-  $gunicorn_package_name            =
-  $gunicorn_package_version         =
-  
-  #instala aqui os pacotes
+  ## Esse vai ser o passenger nocache  
+  # instalar pacote do passenger
+  # cria diretório de log
+  # coloca include na conf do nginx
+  # configura logrotate do passenger
 
 }
