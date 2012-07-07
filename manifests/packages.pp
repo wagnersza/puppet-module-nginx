@@ -41,7 +41,5 @@ class nginx::packages {
   $nginx_passenger_package_version  =
   $gunicorn_package_name            =
   $gunicorn_package_version         =
-  
   #instala aqui os pacotes
-
 }
