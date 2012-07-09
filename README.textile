@@ -2,16 +2,30 @@ h1. Install Nginx
 
 h3. Simple standalone instance:
 
-Create a standalone tomcat instance whose HTTP server listen on port 8080:
+Create a nginx instance listen on port 8080:
 
 <pre>
-  include nginx
+  nginx {"myapp":}
+</pre>
 
-  nginx::instance {"myapp":
-    ensure    => present,
-    http_port => "8080",
+h3. Possible paramiters:
+
+<pre>
+- upstream_tipe [proxy,fastcgi,none]
+- upstream_url  [host:port]
+</pre>
+
+Example to create a proxy upstream:
+
+<pre>
+  nginx {"myapp":
+    upstream_tipe  => "proxy",
+    upstream_url   => "http://localhost:8090",
   }
 </pre>
+
+
+
 
 h2. Author
 
