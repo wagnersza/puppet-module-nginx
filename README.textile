@@ -1,17 +1,19 @@
+h1. under construction
+
 h1. Install Nginx
 
 h3. Simple standalone instance:
 
-Create a nginx instance listen on port 8080:
+Creating one instance Nginx, listening on port 8080:
 
 <pre>
   nginx {"myapp":}
 </pre>
 
-h3. Possible paramiters:
+h3. Possible parameters:
 
 <pre>
-- upstream_tipe [proxy,fastcgi,none]
+- upstream_type [proxy|fastcgi|none]
 - upstream_url  [host:port]
 </pre>
 
@@ -19,7 +21,7 @@ Example to create a proxy upstream:
 
 <pre>
   nginx {"myapp":
-    upstream_tipe  => "proxy",
+    upstream_type  => "proxy",
     upstream_url   => "http://localhost:8090",
   }
 </pre>
